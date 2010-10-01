@@ -78,7 +78,7 @@ __PACKAGE__->add_columns(
     },
 
     content => {
-        data_type     => "BLOB",
+        data_type     => "LONGBLOB",
         default_value => undef,
         is_nullable   => 0,
         size          => 2 ** 32 - 1,
