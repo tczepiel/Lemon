@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>[% global.title or site.title | html %]</title>
+        <link href="[% c.uri_for("/static/lemon.css") %]" rel="stylesheet" type="text/css" />
+        [% IF folder.custom_css %]
+            <style type="text/css">
+            [% folder.custom_css %]
+            </style>
+        [% END %]
+    </head>
+    <body>
+        [% content %]
+    </body>
+</html>
+
+[%# 
+    This template is part of the Lemon picture gallery system, and is
+    free software. You can redistribute it and/or modify it under the 
+    same terms as Perl itself.
+%]

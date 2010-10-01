@@ -1,0 +1,11 @@
+You'll need to configure a database to store your data in and a user
+that can log in and write to that database. For best results your
+database should be configured to use UTF-8 character encoding.
+
+Then edit lemon.conf and set the database connection parameters,
+username and password.
+
+Run script/lemon_server.pl to test the application. On the first
+request the database tables will be created automatically. Then
+navigate to http://localhost:3000/ to configure your first user
+and get started.

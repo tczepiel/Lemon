@@ -1,0 +1,380 @@
+# Spanish translation for the Lemon picture gallery system
+# Copyright (C) 2010 Luke Ross
+# This file is distributed under the same license as the Lemon package.
+# Luke Ross <lr@lukeross.name>, 2010
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.00\n"
+"POT-Creation-Date: 2010-09-09 21:00+0100\n"
+"PO-Revision-Date: 2010-09-13 22:53+0100\n"
+"Last-Translator: Luke Ross <lr@lukeross.name>\n"
+"Language-Team: es <es@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: root/src/users/list.tt2:10
+msgid "Action"
+msgstr "Acción"
+
+#: root/src/folders/view.tt2:47
+msgid "Add image"
+msgstr "Añadir imagen"
+
+#: root/src/error.tt2:3
+msgid "An internal error has occurred."
+msgstr "Un error interno ha ocurrido."
+
+#: lib/Lemon/View/Thumbnail.pm:49
+msgid "Could not create the thumbnail image"
+msgstr "No se pudo crear la imagen en miniatura"
+
+#: lib/Lemon/View/Thumbnail.pm:40
+msgid "Could not read the source image"
+msgstr "No se pudo leer la imagen de origen"
+
+#: root/src/folders/edit.tt2:55 root/src/images/create.tt2:18 root/src/users/edit.tt2:29
+msgid "Create"
+msgstr "Crear"
+
+#: root/src/users/list.tt2:4
+msgid "Create a new user"
+msgstr "Crear un usuario nuevo"
+
+#: root/src/folders/view.tt2:38
+msgid "Create new folder"
+msgstr "Crear nueva carpeta"
+
+#: root/src/images/create.tt2:1
+msgid "Create new image"
+msgstr "Crear nueva imagen"
+
+#: root/src/folders/edit.tt2:26
+msgid "Custom CSS"
+msgstr "Hoja de estilo personalizada"
+
+#: root/src/folders/view.tt2:85 root/src/users/list.tt2:17
+msgid "Delete"
+msgstr "Borrar"
+
+#: root/src/folders/view.tt2:66
+msgid "Delete folder"
+msgstr "Borrar la carpeta"
+
+#: root/src/folders/edit.tt2:15
+msgid "Description"
+msgstr "Descripción"
+
+#: root/src/users/list.tt2:16
+msgid "Edit"
+msgstr "Editar"
+
+#: root/src/folders/edit.tt2:1 root/src/folders/view.tt2:64
+msgid "Edit folder"
+msgstr "Editar la carpeta"
+
+#: root/src/images/edit.tt2:1
+msgid "Edit image description"
+msgstr "Editar descripción de la imagen"
+
+#: root/src/folders/view.tt2:83
+msgid "Edit title"
+msgstr "Editar titulo"
+
+#: root/src/users/edit.tt2:11 root/src/users/list.tt2:9 root/src/users/login.tt2:11
+msgid "Email"
+msgstr "Correo electrónico"
+
+#: lib/Lemon/Controller/Users.pm:256
+msgid "Email address must be provided."
+msgstr "Correo electrónico debe ser proporcionado."
+
+#: root/src/user_error.tt2:1
+msgid "Error"
+msgstr "Error"
+
+#. (error)
+#: root/src/error.tt2:6
+msgid "Error type: %1"
+msgstr "Tipo de error: %1"
+
+#: root/src/images/create.tt2:7
+msgid "File"
+msgstr "Archivo"
+
+#: lib/Lemon/Controller/Folders.pm:94 lib/Lemon/Controller/Folders.pm:99
+msgid "Folder must be empty to delete it."
+msgstr "Carpeta debe estar vacía para borrarla."
+
+#: root/src/folders/edit.tt2:19
+msgid "HTML"
+msgstr "HTML"
+
+#: root/src/error.tt2:1
+msgid "Internal error"
+msgstr "Error interno"
+
+#: root/src/users/login.tt2:21
+msgid "Log in"
+msgstr "Acceder"
+
+#: lib/Lemon/Controller/Users.pm:171
+msgid "Login unsuccessful. Please check the username and password."
+msgstr "Su entrada no tuvo éxito. Por favor, compruebe el nombre de usuario y contraseña."
+
+#: lib/Lemon/Controller/Folders.pm:212
+msgid "No folder or parent ID provided!"
+msgstr "No folder or parent ID provided!"
+
+#: lib/Lemon/Controller/Images.pm:144
+msgid "No such folder."
+msgstr "La carpeta no existe."
+
+#: root/src/folders/edit.tt2:30
+msgid "Owner"
+msgstr "Propietario"
+
+#: lib/Lemon/Controller/Folders.pm:229
+msgid "Owner must be provided."
+msgstr "El propietario debe ser proporcionado."
+
+#:
+msgid "PATH_delocalize_actualizar"
+msgstr "update"
+
+#:
+msgid "PATH_delocalize_borrar"
+msgstr "delete"
+
+#:
+msgid "PATH_delocalize_carpetas"
+msgstr "folders"
+
+#:
+msgid "PATH_delocalize_crear"
+msgstr "create"
+
+#:
+msgid "PATH_delocalize_editar"
+msgstr "edit"
+
+#:
+msgid "PATH_delocalize_guardar"
+msgstr "save"
+
+#:
+msgid "PATH_delocalize_imagen_en_miniatura"
+msgstr "thumbnail"
+
+#:
+msgid "PATH_delocalize_imagenes"
+msgstr "images"
+
+#:
+msgid "PATH_delocalize_iniciar_sesion"
+msgstr "login"
+
+#:
+msgid "PATH_delocalize_listar"
+msgstr "list"
+
+#:
+msgid "PATH_delocalize_terminar_sesion"
+msgstr "logout"
+
+#:
+msgid "PATH_delocalize_usuarios"
+msgstr "users"
+
+#:
+msgid "PATH_delocalize_ver"
+msgstr "view"
+
+#:
+msgid "PATH_localize_create"
+msgstr "crear"
+
+#:
+msgid "PATH_localize_delete"
+msgstr "borrar"
+
+#:
+msgid "PATH_localize_edit"
+msgstr "editar"
+
+#:
+msgid "PATH_localize_folders"
+msgstr "carpetas"
+
+#:
+msgid "PATH_localize_images"
+msgstr "imagenes"
+
+#:
+msgid "PATH_localize_list"
+msgstr "listar"
+
+#:
+msgid "PATH_localize_login"
+msgstr "iniciar_sesion"
+
+#:
+msgid "PATH_localize_logout"
+msgstr "terminar_sesion"
+
+#:
+msgid "PATH_localize_save"
+msgstr "guardar"
+
+#:
+msgid "PATH_localize_thumbnail"
+msgstr "imagen_en_miniatura"
+
+#:
+msgid "PATH_localize_update"
+msgstr "actualizar"
+
+#:
+msgid "PATH_localize_users"
+msgstr "usuarios"
+
+#:
+msgid "PATH_localize_view"
+msgstr "ver"
+
+#: root/src/folders/view.tt2:28
+msgid "Parent folder"
+msgstr "Padre de la carpeta"
+
+#: root/src/users/edit.tt2:15 root/src/users/login.tt2:15
+msgid "Password"
+msgstr "Contraseña"
+
+#: lib/Lemon/Controller/Users.pm:244
+msgid "Password must be provided."
+msgstr "La contraseña debe ser proporcionada."
+
+#: root/src/folders/edit.tt2:18
+msgid "Plain text"
+msgstr "Texto sin formato"
+
+#: lib/Lemon/Controller/Users.pm:56
+msgid "Please set up an account now."
+msgstr "Por favor, configurar una cuenta ahora."
+
+#. ([ '<a href="http://lukeross.name/">', '</a>', '<a href="http://catalyst.perl.org">' ])
+#: root/lib/site/footer:5
+msgid "Powered by %1Lemon%2 and %3Catalyst%2."
+msgstr "Creado por %1Lemon%2 y %3Catalyst%2."
+
+#: root/lib/site/footer:3
+msgid "Powered by Catalyst"
+msgstr "Creado por Catalyst"
+
+#: root/src/users/edit.tt2:19
+msgid "Repeat password (to confirm)"
+msgstr "Repita la contraseña (para confirmar)"
+
+#: lib/Lemon/Controller/Root.pm:54
+msgid "Resource not found."
+msgstr "El recurso no se encuentra."
+
+#: root/src/folders/edit.tt2:52 root/src/images/edit.tt2:14 root/src/users/edit.tt2:27
+msgid "Save"
+msgstr "Guardar"
+
+#: root/src/folders/edit.tt2:7
+msgid "Short name (URL part)"
+msgstr "Nombre abreviado (parte URL)"
+
+#: lib/Lemon/Controller/Folders.pm:217
+msgid "Short name must be provided and consist of letters, numbers and underscores only."
+msgstr "El nombre corto se facilitará y debe constar de letras, números y subrayados solamente."
+
+#: root/src/users/saved.tt2:3
+msgid "The profile was successfully saved."
+msgstr "El perfil ha sido guardado."
+
+#: lib/Lemon/Controller/Users.pm:262
+msgid "The two passwords do not match."
+msgstr "Las dos contraseñas no coinciden."
+
+#: root/src/folders/edit.tt2:11 root/src/images/create.tt2:11 root/src/images/edit.tt2:7
+msgid "Title"
+msgstr "Titulo"
+
+#: lib/Lemon/Controller/Folders.pm:223
+msgid "Title must be provided."
+msgstr "Título debe ser proporcionado."
+
+#: root/src/users/edit.tt2:1
+msgid "User edit"
+msgstr "Editar usuario"
+
+#: root/src/users/list.tt2:1
+msgid "User list"
+msgstr "Lista de usuarios"
+
+#: root/src/users/login.tt2:1
+msgid "User login"
+msgstr "Inicio de sesión"
+
+#: root/src/users/login_successful.tt2:1
+msgid "User login successful"
+msgstr "El inicio de sesión de usuario se ha realizado"
+
+#: root/src/users/logout.tt2:1
+msgid "User logout successful"
+msgstr "La terminación de sesión se ha realizado"
+
+#: root/src/users/saved.tt2:1
+msgid "User saved"
+msgstr "El usuario se ha guardado"
+
+#: root/src/folders/view.tt2:1
+msgid "View folder"
+msgstr "Ver carpeta"
+
+#. ([ login_tag, '</a>', homepage_tag ])
+#: root/src/users/logout.tt2:8
+msgid "You can %1log in%2 again, or return to the %3home page%2."
+msgstr "Puede %1iniciar sesión%2 de nuevo, o volver a la %3página de inicio%2."
+
+#. ([ login_tag, '</a>' ])
+#: root/src/users/saved.tt2:8
+msgid "You can now %1log in%2."
+msgstr "Puede %1iniciar sesión%2 ahora."
+
+#. ([ homepage_tag, '</a>' ])
+#: root/src/users/login_successful.tt2:6
+msgid "You have logged in successfully. You can now go to the %1home page%2."
+msgstr "Ha iniciado la sesión correctamente. Puede ir a la %1página de inicio%2."
+
+#: root/src/users/logout.tt2:3
+msgid "You have logged out successfully."
+msgstr "Ha terminado la sesión."
+
+#: lib/Lemon/Controller/Users.pm:209
+msgid "You must be logged in to perform this action."
+msgstr "Debe haber iniciado la sesión para realizar esta acción."
+
+#: lib/Lemon/Controller/Folders.pm:89
+msgid "You must own the folder to delete it."
+msgstr "Debe haber iniciado la sesión para realizar esta acción"
+
+#: lib/Lemon/Controller/Folders.pm:136 lib/Lemon/Controller/Folders.pm:183 lib/Lemon/Controller/Images.pm:149
+msgid "You must own the folder to edit it."
+msgstr "Debe ser el propietario de la carpeta para borrarla."
+
+#: lib/Lemon/Controller/Images.pm:76
+msgid "You must own the image to delete it."
+msgstr "Debe ser el propietario de la imagen para borrarla."
+
+#: lib/Lemon/Controller/Images.pm:113 lib/Lemon/Controller/Images.pm:222
+msgid "You must own the image to edit it."
+msgstr "Debe ser el propietario de la imagen para editarla."
+
+#: lib/Lemon/Controller/Folders.pm:197
+msgid "You must own the parent folder to create a subfolder."
+msgstr "Debe ser dueño de la carpeta para crear una subcarpeta."

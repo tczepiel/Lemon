@@ -1,0 +1,16 @@
+[% SET global.title = l('User saved') %]
+
+<p>[% l('The profile was successfully saved.') | html %]</p>
+
+[% IF login_now %]
+    [% SET login_tag = '<a href="' _ c.uri_for("/users/login") _ '">' %] 
+    <p>
+        [% l('You can now [_1]log in[_2].', [login_tag, '</a>']) %]
+    </p>
+[% END %]
+
+[%# 
+    This template is part of the Lemon picture gallery system, and is
+    free software. You can redistribute it and/or modify it under the 
+    same terms as Perl itself.
+%]

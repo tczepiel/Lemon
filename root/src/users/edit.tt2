@@ -1,0 +1,41 @@
+[% SET global.title = l('User edit') %]
+
+<form method="post" action="[% c.uri_for("/users/save") %]">
+
+    [% IF message %]
+        <p class="message">[% message %]</p>
+    [% END %]
+
+    <table>
+        <tr>
+            <th>[% l('Email') | html %]</th>
+            <td><input name="email" value="[% user.email | html %]" /></td>
+        </tr>
+        <tr>
+            <th>[% l('Password') | html %]</th>
+            <td><input name="password" type="password" /></td>
+        </tr>
+        <tr>
+            <th>[% l('Repeat password (to confirm)') | html %]</th>
+            <td><input name="passwordConfirm" type="password" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                [% IF user.id %]
+                    <input type="hidden" name="userID" value="[% user.id %]" />
+                    <input type="submit" value="[% l('Save') | html %]" />
+                [% ELSE %]
+                    <input type="submit" value="[% l('Create') | html %]" />
+                [% END %]
+            </td>
+        </tr>
+    </table>
+
+</form>
+
+[%# 
+    This template is part of the Lemon picture gallery system, and is
+    free software. You can redistribute it and/or modify it under the 
+    same terms as Perl itself.
+%]

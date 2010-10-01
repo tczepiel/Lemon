@@ -1,0 +1,7 @@
+<h1>[% global.title or site.title | html %]</h1>
+
+[%# 
+    This template is part of the Lemon picture gallery system, and is
+    free software. You can redistribute it and/or modify it under the 
+    same terms as Perl itself.
+%]

@@ -1,0 +1,25 @@
+[% SET global.title = l("Edit image description") %]
+
+<form method="post" action="[% c.uri_for("/images/update") %]">
+
+    <table>
+        <tr>
+            <th>[% l('Title') %]</th>
+            <td><input name="title" value="[% image.title | html %]" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="hidden" name="id" value="[% image.id %]" />
+                <input type="submit" value="[% l('Save') | html %]" />
+            </td>
+        </tr>
+    </table>
+
+</form>
+
+[%# 
+    This template is part of the Lemon picture gallery system, and is
+    free software. You can redistribute it and/or modify it under the 
+    same terms as Perl itself.
+%]

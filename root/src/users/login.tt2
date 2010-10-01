@@ -1,0 +1,32 @@
+[% SET global.title = l('User login') %]
+
+[% IF error %]
+    <p class="message">[% error | html %]</p>
+[% END %]
+
+<form method="post" action="[% c.uri_for("/users/login") %]">
+
+    <table>
+        <tr>
+            <th>[% l('Email') | html %]</th>
+            <td><input name="username" /></td>
+        </tr>
+        <tr>
+            <th>[% l('Password') | html %]</th>
+            <td><input name="password" type="password" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="[% l('Log in') | html %]" />
+            </td>
+        </tr>
+    </table>
+
+</form>
+
+[%# 
+    This template is part of the Lemon picture gallery system, and is
+    free software. You can redistribute it and/or modify it under the 
+    same terms as Perl itself.
+%]

@@ -1,0 +1,12 @@
+[% IF template.name.match('\.(css|js|txt)');
+     debug("Passing page through as text: $template.name");
+     content;
+   ELSE;
+     debug("Applying HTML page layout wrappers to $template.name\n");
+     content WRAPPER site/html + site/layout;
+   END;
+-%][%# 
+    This template is part of the Lemon picture gallery system, and is
+    free software. You can redistribute it and/or modify it under the 
+    same terms as Perl itself.
+%]

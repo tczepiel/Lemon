@@ -1,0 +1,67 @@
+[% SET global.title = l("Edit folder") %]
+
+<form method="post" action="[% c.uri_for("/folders/save") %]">
+
+    <table>
+        <tr>
+            <th>[% l('Short name (URL part)') | html %]</th>
+            <td><input name="short_name" value="[% folder.short_name | html %]" /></td>
+        </tr>
+        <tr>
+            <th>[% l('Title') | html %]</th>
+            <td><input name="title" value="[% folder.title | html %]" /></td>
+        </tr>
+        <tr>
+            <th>[% l('Description') | html %]</th>
+            <td>
+                <select name="description_mimetype">
+                    <option value="text/plain">[% l("Plain text") | html %]</option>
+                    <option value="text/html">[% l("HTML") | html %]</option>
+                </select>
+                <br />
+                <textarea name="description" rows="5" cols="40">[% folder.description | html %]</textarea>
+            </td>
+        </tr>
+        <tr>
+            <th>[% l('Custom CSS') | html %]</th>
+            <td><textarea name="css" rows="5" cols="40">[% folder.custom_css | html %]</textarea></td>
+        </tr>
+        <tr>
+            <th>[% l('Owner') | html %]</th>
+            <td>
+                <select name="owner">
+                    [% IF folder %]
+                        [% SET target_owner = folder.owner.id %]
+                    [% ELSE %]
+                        [% SET target_owner = c.user.get("id") %]
+                    [% END %]
+                    [% FOREACH pair IN users.pairs %]
+                        <option value="[% pair.key %]"[% IF pair.key == target_owner %] selected="selected"[% END %]>
+                            [% pair.value | html %]
+                        </option>
+                    [% END %]
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                [% IF folder.id %]
+                    <input type="hidden" name="id" value="[% folder.id %]" />
+                    <input type="submit" value="[% l('Save') | html %]" />
+                [% ELSE %]
+                    <input type="hidden" name="parent" value="[% parent %]" />
+                    <input type="submit" value="[% l('Create') | html %]" />
+                [% END %]
+            </td>
+        </tr>
+    </table>
+
+</form>
+
+[%# 
+    This template is part of the Lemon picture gallery system, and is
+    free software. You can redistribute it and/or modify it under the 
+    same terms as Perl itself.
+%]

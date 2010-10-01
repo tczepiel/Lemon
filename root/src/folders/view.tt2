@@ -1,0 +1,103 @@
+[% SET global.title = folder.title or l("View folder") %]
+
+[% SET per_row = 4 %]
+[% SET global.cell_counter = 0 %]
+
+[% BLOCK table_cell %]
+    [% IF global.cell_counter % 4 == 0 %]
+        <tr>
+    [% END %]
+    [% content %]
+    [% SET global.cell_counter = global.cell_counter + 1 %]
+    [% IF global.cell_counter % 4 == 0 %]
+        </tr>
+    [% END %]
+[% END %]
+
+[% IF folder %]
+    [% IF folder.description_mime_type == "text/html" %]
+        <div id="folder_description">[% folder.description %]</div>
+    [% ELSIF folder.description_mime_type == "text/plain" %]
+        <p id="folder_description">[% folder.description | html %]</p>
+    [% ELSE %]
+        <!-- Description of MIME type [% folder.description_mime_type | html %] cannot be displayed here. -->
+    [% END %]
+
+    [% IF folder %]
+    <p class="actions" id="folder_actions">
+        <a href="[% c.uri_for("/folders/view", parent_path) %]">[% l("Parent folder") %]</a>
+    <p>
+    [% END %]
+[% END %]
+
+<table id="folderView">
+    [% IF show_create %]
+        [% WRAPPER table_cell %]
+            <td>
+                <a href="[% c.uri_for("/folders/create", folder_id || "new") %]" class="actions">
+                    [% l("Create new folder") | html %]
+                </a>
+            </td>
+        [% END %]
+    [% END %]
+    [% IF show_edit %]
+        [% WRAPPER table_cell %]
+            <td>
+                <a href="[% c.uri_for("/images/create", folder_id) %]" class="actions">
+                    [% l("Add image") | html %]
+                </a>
+            </td>
+        [% END %]
+    [% END %]
+
+    [% FOREACH subfolder = subfolders %]
+        [% WRAPPER table_cell %]
+            <td class="subfolderCell">
+                [% IF args %]
+                    <a href="[% c.uri_for("/folders/view", folder_path, subfolder.short_name) %]">
+                [% ELSE %]
+                    <a href="[% c.uri_for("/folders/view", subfolder.short_name) %]">
+                [% END %]
+                <strong>[% subfolder.title %]</strong>
+                [% IF show_create %]
+                    <br />
+                    <a href="[% c.uri_for("/folders/edit", subfolder.id) %]" class="actions">[% l("Edit folder") | html %]</a>
+                    <br />
+                    <a href="[% c.uri_for("/folders/delete", subfolder.id) %]" class="actions">[% l("Delete folder") | html %]</a>
+                [% END %]
+                </a>
+            </td>
+        [% END %]
+    [% END %]
+
+    [% FOREACH image = images %]
+        [% WRAPPER table_cell %]
+            <td class="imageCell">
+                <a href="[% c.uri_for("/images/view", image.id) %]">
+                    <img src="[% c.uri_for("/images/thumbnail", image.id) %]" alt="[% image.title | html %]" />
+                </a>
+                <br />
+                [% image.title | html %]
+                [% IF c.user %]
+                    <br />
+                    <a href="[% c.uri_for("/images/edit", image.id) %]" class="actions">[% l("Edit title") | html %]</a>
+                    <br />
+                    <a href="[% c.uri_for("/images/delete", image.id) %]" class="actions">[% l("Delete") | html %]</a>
+                [% END %]
+            </td>
+        [% END %]
+    [% END %]
+
+    [% WHILE global.cell_counter % 4 != 0 %]
+        [% WRAPPER table_cell %]
+            <td class="spacerCell"></td>
+        [% END %]
+    [% END %]
+
+</table>
+
+[%# 
+    This template is part of the Lemon picture gallery system, and is
+    free software. You can redistribute it and/or modify it under the 
+    same terms as Perl itself.
+%]

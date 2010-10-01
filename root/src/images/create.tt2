@@ -1,0 +1,29 @@
+[% SET global.title = l("Create new image") %]
+
+<form method="post" action="[% c.uri_for("/images/save") %]" enctype="multipart/form-data">
+
+    <table>
+        <tr>
+            <th>[% l('File') %]</th>
+            <td><input type="file" name="file" /></td>
+        </tr>
+        <tr>
+            <th>[% l('Title') %]</th>
+            <td><input name="title" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="hidden" name="folder" value="[% folder %]" />
+                <input type="submit" value="[% l('Create') | html %]" />
+            </td>
+        </tr>
+    </table>
+
+</form>
+
+[%# 
+    This template is part of the Lemon picture gallery system, and is
+    free software. You can redistribute it and/or modify it under the 
+    same terms as Perl itself.
+%]

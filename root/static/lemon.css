@@ -1,0 +1,27 @@
+/*
+    This file is part of the Lemon picture gallery system, and is
+    free software. You can redistribute it and/or modify it under the 
+    same terms as Perl itself.
+*/
+
+
+h1 { color: #c3c91a; font-family: sans-serif }
+
+a { color: #000080; text-decoration: underline }
+
+th { text-align: left; font-family: sans-serif }
+
+#folderView { width: 100%; font-family: sans-serif }
+#folderView td { border: solid thin #c0c0c0; width: 25%; min-height: 200px; text-align: center }
+
+#catalystLogo { float:left; border: none; padding-right: 1px } 
+
+.actions { font-size: small; font-family: sans-serif }
+
+#folderView td.spacerCell { border: none }
+
+#footer { font-size: small; padding-top: 1em }
+#footer img { margin-right: 2em; margin-top: -1em; border: none }
+#footer a { border: none }
+
+p.message { font-weight: bold; background-color: #c0c0c0 }

@@ -1,0 +1,13 @@
+[% SET global.title = l('Internal error') %]
+<p>
+    [% l("An internal error has occurred.") | html %]
+</p>
+<p>
+    [% l("Error type: [_1]", error) | html %]
+</p>
+
+[%# 
+    This template is part of the Lemon pictury gallery system, and is
+    free software. You can redistribute it and/or modify it under the 
+    same terms as Perl itself.
+%]

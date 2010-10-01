@@ -1,0 +1,12 @@
+<p id="footer">
+    <a href="http://catalyst.perl.org">
+        <img src="[% c.uri_for("/static/btn_120x50_powered.png") %]" alt="[% l("Powered by Catalyst") | html %]" id="catalystLogo" />
+    </a>
+    [% l('Powered by [_1]Lemon[_2] and [_3]Catalyst[_2].', ['<a href="http://lukeross.name/">', '</a>', '<a href="http://catalyst.perl.org">']) %]
+</p>
+
+[%# 
+    This template is part of the Lemon picture gallery system, and is
+    free software. You can redistribute it and/or modify it under the 
+    same terms as Perl itself.
+%]

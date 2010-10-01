@@ -1,0 +1,28 @@
+[% SET global.title = l('User list') %]
+
+<p>
+    <a href="[% c.uri_for("/users/create") %]">[% l("Create a new user") | html %]</a>
+</p>
+
+<table>
+
+    <tr>
+        <th>[% l('Email') %]</th>
+        <th>[% l('Action') %]</th>
+    </tr>
+    
+    [% FOREACH user = users %]
+        <tr>
+            <td>[% user.email | html %]</th>
+            <td><a href="[% c.uri_for('/users/edit', user.id) %]">[% l('Edit') | html %]</a>
+            <a href="[% c.uri_for('/users/delete', user.id) %]">[% l('Delete') | html %]</a></td>
+        </tr>
+    [% END %]
+    
+</table>
+
+[%# 
+    This template is part of the Lemon picture gallery system, and is
+    free software. You can redistribute it and/or modify it under the 
+    same terms as Perl itself.
+%]

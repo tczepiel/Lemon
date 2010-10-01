@@ -1,0 +1,15 @@
+[% SET global.title = l('User logout successful') %]
+
+<p>[% l('You have logged out successfully.') | html %]</p>
+
+<p>
+    [% SET login_tag = '<a href="' _ c.uri_for("/users/login") _ '">' %] 
+    [% SET homepage_tag = '<a href="' _ c.uri_for("/") _ '">' %] 
+    [% l('You can [_1]log in[_2] again, or return to the [_3]home page[_2].', [login_tag, '</a>', homepage_tag]) %]
+</p>
+
+[%# 
+    This template is part of the Lemon picture gallery system, and is
+    free software. You can redistribute it and/or modify it under the 
+    same terms as Perl itself.
+%]

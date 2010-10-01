@@ -1,0 +1,13 @@
+[% SET global.title = l('User login successful') %]
+
+[% SET homepage_tag = '<a href="' _ c.uri_for("/") _ '">' %] 
+
+<p>
+    [% l('You have logged in successfully. You can now go to the [_1]home page[_2].', [homepage_tag, '</a>']) %]
+</p>
+
+[%# 
+    This template is part of the Lemon picture gallery system, and is
+    free software. You can redistribute it and/or modify it under the 
+    same terms as Perl itself.
+%]

@@ -1,0 +1,11 @@
+[% PROCESS site/header %]
+
+[% content %]
+
+[% PROCESS site/footer %]
+
+[%# 
+    This template is part of the Lemon picture gallery system, and is
+    free software. You can redistribute it and/or modify it under the 
+    same terms as Perl itself.
+%]
