@@ -36,6 +36,11 @@ select from.
 sub index :Path :Args(0) {
     my ($self, $c) = @_;
 
+    # Set up an admin user if required
+    if (not $c->model("DB")->schema->administrator_configured) {
+        $c->detach("Lemon::Controller::Users", "create");
+    }
+
     # Show the top-level folder
     $c->forward("/folders/view");
 }
@@ -97,12 +102,6 @@ sub auto :Private {
         # We have to do it here or the user could never save their
         # data
         $self->config(db_configured => 1);
-
-        # Set up an admin user if required
-        if (not $c->model("DB")->schema->administrator_configured) {
-            $c->forward("Lemon::Controller::Users", "create");
-            return 0; # Stop processing
-        }
     }
 
     # The :LoggedIn attribute is used against actions that require a
